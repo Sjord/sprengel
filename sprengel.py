@@ -21,7 +21,7 @@ base_files = [
 
 
 def urljoin(a, b):
-    return a + '/' + b
+    return a.rstrip('/') + '/' + b.lstrip('/')
 
 
 def save_file(url, path):
