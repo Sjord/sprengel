@@ -51,12 +51,12 @@ def encode_char(c):
         cord = ord(c)
         cchr = c
 
-    if cchr == b'_':
-        return '__'
     if cord >= 126 or cchr in '\:*?"<>|':
         return '~%x' % cord
     if cchr.isupper():
         return '_' + cchr.lower()
+    if cchr == '_':
+        return '__'
     return cchr
 
 
