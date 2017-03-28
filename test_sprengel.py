@@ -2,9 +2,10 @@ from __future__ import print_function, unicode_literals
 import unittest
 import sprengel
 
+
 class EncodePathTest(unittest.TestCase):
     def _assert_encode_path(self, filename, expected):
-        self.assertEquals(expected, sprengel.encode_path(filename));
+        self.assertEqual(expected, sprengel.encode_path(filename))
 
     def test_returns_string(self):
         self._assert_encode_path(b"abc", "abc")
