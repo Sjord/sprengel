@@ -6,7 +6,7 @@ Download a .hg directory exposed on the web, e.g. http://example.org/.hg/, even 
 
 Follow these steps to download the sources:
 
-* Run the script
+* Run the script: `python sprengel.py http://example.com/`
     * it downloads the manifest and changelog files as described in [the documentation](https://www.mercurial-scm.org/wiki/Repository#Structure).
     * then it runs `hg --debug manifest` to get a list of files.
     * then it tries to download all those files.
